@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
-export default function Success() {
+export default function Success({movietitle, moviedate, moviehour, movieseats, moviebuyer, moviecpf}) {
+
     return (
         <>
             <SuccessTitle>
@@ -9,22 +11,21 @@ export default function Success() {
             <SuccessInfo>
                 <div>
                     <h1>Filme e sessão</h1>
-                    <h2>jhjkhdjkhdsjkhsa</h2>
-                    <h2>nsjskasjdkhjskh</h2>
+                    <h2>{movietitle}</h2>
+                    <h2>{moviedate} - {moviehour}</h2>
                 </div>
                 <div>
                     <h1>Ingressos</h1>
-                    <h2>nnkjnjsanj</h2>
-                    <h2>nxnjkncjknjk</h2>
+                    {movieseats.map((num)=> <h2>Assento {num}</h2>)}
                 </div>
                 <div>
                     <h1>Comprador</h1>
-                    <h2>Nome: ncjncjnjkzcnjk</h2>
-                    <h2>CPF: bhbcjhbhcjbj</h2>
+                    <h2>Nome: {moviebuyer}</h2>
+                    <h2>CPF: {moviecpf}</h2>
                 </div>
             </SuccessInfo>
             <SuccessButton>
-                <button>Voltar pra Home</button>
+                <Link to="/"><button>Voltar pra Home</button></Link>
             </SuccessButton>
         </>
     )
@@ -70,7 +71,7 @@ const SuccessButton = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
     button{
         width: 225px;
         height: 43px;

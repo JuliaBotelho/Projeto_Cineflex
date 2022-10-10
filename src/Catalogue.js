@@ -73,7 +73,7 @@ const Movies = styled.div`
         border-color: #FFFFFF;
         box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
         &:hover{
-            box-shadow: 3px 3px 3px 3px rgba(255, 165, 0, 0.4);
+            box-shadow: 3px 3px 3px 3px rgba(255, 165, 0, 0.5);
         }
     }
 `

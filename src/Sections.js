@@ -22,6 +22,10 @@ export default function Sections() {
         })
     }, [])
 
+    if (error === true){
+        return <SectionChoice> <h1>Perdão houve um erro na requisição! Por favor tente novamente!</h1></SectionChoice>
+    }
+
     if (!error && sections === []){
         return <SectionChoice> <h1>Carregando...</h1></SectionChoice>
     }

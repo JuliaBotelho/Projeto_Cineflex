@@ -3,7 +3,6 @@ import Catalogue from "./Catalogue"
 import Sections from "./Sections"
 import GlobalStyle from "./GlobalStyle"
 import Seats from "./Seats"
-import Success from "./Success"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 export default function App() {
@@ -14,8 +13,7 @@ export default function App() {
             <Routes>
                 < Route path="/" element={<Catalogue />} />
                 < Route path="/filme/:imageId" element={<Sections />} />
-                < Route path="/sessao/:sectionId" element={<Seats />} />
-               {/*  < Route path="/" element={<Success />} />   */}
+                < Route path="/sessao/:sectionId" element={<Seats />} /> 
             </Routes>
         </ BrowserRouter>
     )
