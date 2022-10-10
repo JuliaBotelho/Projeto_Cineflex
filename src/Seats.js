@@ -86,19 +86,19 @@ export default function Seats() {
                 </SeatChoice>
                 <SeatDisplay>
                     <SeatButtons>
-                        {seats.map((seat, id) => (<Seat key={id} seat={seat} handleSeat={handleSeat} />))}
+                        {seats.map((seat, id) => (<Seat data-identifier="seat" key={id} seat={seat} handleSeat={handleSeat} />))}
                     </SeatButtons>
                 </SeatDisplay>
-                <SeatSubtittle>
-                    <SeatGreen>
+                <SeatSubtittle >
+                    <SeatGreen data-identifier="seat-selected-subtitle">
                         <div></div>
                         <p>Selecionado</p>
                     </SeatGreen>
-                    <SeatGray>
+                    <SeatGray data-identifier="seat-available-subtitle">
                         <div></div>
                         <p>Disponível</p>
                     </SeatGray>
-                    <SeatYellow>
+                    <SeatYellow data-identifier="seat-unavailable-subtitle">
                         <div></div>
                         <p>Indisponível</p>
                     </SeatYellow>
@@ -108,6 +108,7 @@ export default function Seats() {
                         <div>
                             <p>Nome do comprador:</p>
                             <input
+                                data-identifier="buyer-name-input"
                                 placeholder="Digite seu nome..."
                                 type = "text"
                                 value={buyerName}
@@ -118,6 +119,7 @@ export default function Seats() {
                         <div>
                             <p>CPF do comprador:</p>
                             <input
+                                data-identifier="buyer-cpf-input"
                                 placeholder="Digite seu CPF..."
                                 type="number"
                                 value={buyerCPF}
@@ -127,7 +129,7 @@ export default function Seats() {
                         </div>
                     </SeatInputs>
                     <ReserveButton>
-                        <button type="submit" >Reservar assento(s)</button>
+                        <button data-identifier="reservation-btn" type="submit" >Reservar assento(s)</button>
                     </ReserveButton>
                 </form>
                 <SeatsFooter>

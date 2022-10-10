@@ -8,7 +8,7 @@ export default function Success({movietitle, moviedate, moviehour, movieseats, m
             <SuccessTitle>
                 <h1>Pedido feito com sucesso!</h1>
             </SuccessTitle>
-            <SuccessInfo>
+            <SuccessInfo data-identifier="buyer-infos-reserve-finished">
                 <div>
                     <h1>Filme e sessão</h1>
                     <h2>{movietitle}</h2>
@@ -25,7 +25,7 @@ export default function Success({movietitle, moviedate, moviehour, movieseats, m
                 </div>
             </SuccessInfo>
             <SuccessButton>
-                <Link to="/"><button>Voltar pra Home</button></Link>
+                <Link to="/"><button data-identifier="back-to-home-btn" >Voltar pra Home</button></Link>
             </SuccessButton>
         </>
     )

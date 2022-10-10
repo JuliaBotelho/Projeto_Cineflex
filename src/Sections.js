@@ -38,16 +38,16 @@ export default function Sections() {
              {sections.map((section)=> 
             <>
                 <Section>
-                    <h2>{section.weekday} - {section.date}</h2>
+                    <h2 data-identifier="session-date">{section.weekday} - {section.date}</h2>
                 </Section>
                 <SectionButtons>
-                    {section.showtimes.map((hour) => <Link to = {`/sessao/${hour.id}`}> <button>{hour.name}</button> </Link>)}
+                    {section.showtimes.map((hour) => <Link to = {`/sessao/${hour.id}`}> <button data-identifier="hour-minute-btn">{hour.name}</button> </Link>)}
                 </SectionButtons>
             </>)
             } 
             <SectionFooter>
-                <img src={movie.posterURL} />
-                <h2>{movie.title}</h2>
+                <img data-identifier="movie-img-preview" src={movie.posterURL} />
+                <h2 data-identifier="movie-and-session-infos-preview">{movie.title}</h2>
             </SectionFooter>
         </>
     )

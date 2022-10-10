@@ -33,7 +33,7 @@ export default function Catalogue() {
             <MovieChoice>
                 <h1> Selecione o filme </h1>
                 <Movies>
-                    {images.map((img)=> <Link to={`/filme/${img.id}`} > <img src={img.posterURL} key={img.id}/> </Link>)}
+                    {images.map((img)=> <Link to={`/filme/${img.id}`} > <img data-identifier="movie-outdoor" src={img.posterURL} key={img.id}/> </Link>)}
                 </Movies>
             </MovieChoice>
         </>
